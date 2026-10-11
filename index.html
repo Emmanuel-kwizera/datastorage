@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tech Hub Visitor Log - Front desk visitor check-in system">
+  <title>Tech Hub Visitor Log</title>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <h1>Tech Hub Visitor Log</h1>
+      <p class="subtitle">Front Desk Visitor Sign-In</p>
+    </header>
+
+    <main class="main-content">
+      <!-- Left Column: The Form -->
+      <section class="card form-column" aria-labelledby="form-heading">
+        <h2 id="form-heading">Sign In</h2>
+        <form id="visitor-form" novalidate>
+          <div class="form-group">
+            <label for="visitor-name">Visitor Name</label>
+            <input type="text" id="visitor-name" name="visitorName" placeholder="e.g. Jane Doe" required
+              autocomplete="name">
+          </div>
+
+          <div class="form-group">
+            <label for="company-visiting">Company Visiting</label>
+            <input type="text" id="company-visiting" name="companyVisiting" placeholder="e.g. Acme Corp" required
+              autocomplete="organization">
+          </div>
+
+          <button type="submit" id="submit-btn" class="btn-submit">Submit</button>
+        </form>
+      </section>
+
+      <!-- Right Column: The Log -->
+      <section class="card log-column" aria-labelledby="log-heading">
+        <h2 id="log-heading">Current Visitors</h2>
+        <ul id="visitor-list" class="visitor-list" aria-live="polite"></ul>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="script.js?v=2"></script>
+</body>
+
+</html>
